@@ -1,0 +1,34 @@
+# Quick Python Environment Setup for LLM Development
+# Copy and paste these commands one by one
+
+# 1. Create a virtual environment
+python3 -m venv .venv
+
+# 2. Activate the environment
+source .venv/bin/activate  
+
+# 3. Upgrade pip and build tools
+pip install --upgrade pip setuptools wheel
+
+# 4. Install core development tools
+pip install --upgrade notebook ipython ipykernel pip-tools jupytext
+
+# 5. Install latest Marimo (always gets the newest version)
+pip install --upgrade marimo
+
+# 6. Install core data science libraries
+pip install --upgrade numpy pandas matplotlib seaborn scikit-learn scipy plotly
+
+# 7. Install LLM/AI libraries (essential for LLM work)
+pip install --upgrade transformers torch tokenizers datasets huggingface-hub tiktoken openai
+
+# 8. Install additional useful libraries for LLM development
+pip install --upgrade requests python-dotenv tqdm rich langchain langchain-openai
+
+# 9. Generate requirements.txt for reproducibility
+pip freeze > requirements.txt
+
+# 10. Verify installation
+python -c "import marimo; print(f'Marimo version: {marimo.__version__}')"
+
+echo "✅ Setup complete! Use 'marimo edit' to start developing."
