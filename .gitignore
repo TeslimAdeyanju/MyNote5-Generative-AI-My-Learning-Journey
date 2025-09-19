@@ -142,4 +142,7 @@ cython_debug/
 
 
 
+# Ignore image files
+*.jpg
+
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Python,LLm
